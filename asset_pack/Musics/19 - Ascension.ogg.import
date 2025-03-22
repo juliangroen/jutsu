@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fcpugby2kswh"
+path="res://.godot/imported/19 - Ascension.ogg-d0e1e0d073dd974f0a3768a9d36f72e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset_pack/Musics/19 - Ascension.ogg"
+dest_files=["res://.godot/imported/19 - Ascension.ogg-d0e1e0d073dd974f0a3768a9d36f72e6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

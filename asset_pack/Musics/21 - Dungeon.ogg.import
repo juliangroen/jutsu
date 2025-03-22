@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://laiht2ds7xst"
+path="res://.godot/imported/21 - Dungeon.ogg-bec5a337950d966f47fd2ff5c317840a.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset_pack/Musics/21 - Dungeon.ogg"
+dest_files=["res://.godot/imported/21 - Dungeon.ogg-bec5a337950d966f47fd2ff5c317840a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://beplmlyxkiakr"]
+
+[ext_resource type="Script" uid="uid://c0eo4epnmu8h4" path="res://content/player/player.gd" id="1_osspy"]
+[ext_resource type="PackedScene" uid="uid://dqj2pkeixeea" path="res://content/player/ninja_dark_sprite.tscn" id="2_b87do"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b87do"]
+radius = 8.0
+height = 18.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_osspy")
+
+[node name="NinjaDarkSprite" parent="." instance=ExtResource("2_b87do")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_b87do")
