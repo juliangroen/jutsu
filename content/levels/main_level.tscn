@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5yxedboayf4h"]
+
+[ext_resource type="TileSet" uid="uid://d1148w3jgjddh" path="res://content/levels/main_tileset.tres" id="1_askbe"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Grass" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_askbe")
+
+[node name="Terrain" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_askbe")

@@ -26,24 +26,19 @@ var direction_map = {
 	Directions.RIGHT: "right",
 }
 
+@export var speed := PlayerConfig.base_speed
+@onready var animated_sprite := $NinjaDarkSprite
+
 var state := States.IDLE : set = set_state
 var direction := Directions.DOWN : set = set_direction
 
-@export var speed := PlayerConfig.base_speed
-# @export var direction := "down"
-@export var is_moving := false
-
-@onready var animated_sprite := $NinjaDarkSprite
-
 func set_state(new_state: States) -> void:
-	# var previous_state := state
 	if state == States.ATTACKING:
 		await animated_sprite.animation_finished
 
 	state = new_state
 
 func set_direction(new_direction: Directions) -> void:
-	# var previous_direction := direction
 	direction = new_direction
 
 func get_input() -> void:
@@ -68,7 +63,6 @@ func get_input() -> void:
 	else:
 		set_state(States.WALKING)
 
-
 func handle_animation() -> void:
 
 	if state == States.ATTACKING:
@@ -82,4 +76,3 @@ func _physics_process(_delta: float) -> void:
 	get_input()
 	handle_animation()
 	move_and_slide()
-	print(state_map[state])
