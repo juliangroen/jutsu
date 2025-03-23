@@ -22,8 +22,8 @@ PlayerConfig="*res://system/player_config.gd"
 
 window/size/viewport_width=496
 window/size/viewport_height=272
+window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/scale=4.0
 window/stretch/scale_mode="integer"
 
 [input]
