@@ -13,19 +13,6 @@ enum Directions {
 	RIGHT,
 }
 
-var state_map = {
-	States.IDLE: "idle",
-	States.WALKING: "walking",
-	States.ATTACKING: "attacking",
-}
-
-var direction_map = {
-	Directions.LEFT: "left",
-	Directions.DOWN: "down",
-	Directions.UP: "up",
-	Directions.RIGHT: "right",
-}
-
 @export var speed := PlayerConfig.base_speed
 @onready var animated_sprite := $NinjaDarkSprite
 
@@ -65,12 +52,13 @@ func get_input() -> void:
 
 func handle_animation() -> void:
 
+	var direction_string : String = Directions.find_key(direction).to_lower()
 	if state == States.ATTACKING:
-		animated_sprite.play("attack_%s" % direction_map[direction])
+		animated_sprite.play("attack_%s" % direction_string)
 	elif state == States.WALKING:
-		animated_sprite.play("walk_%s" % direction_map[direction])
+		animated_sprite.play("walk_%s" % direction_string)
 	elif state == States.IDLE:
-		animated_sprite.play("idle_%s" % direction_map[direction])
+		animated_sprite.play("idle_%s" % direction_string)
 
 func _physics_process(_delta: float) -> void:
 	get_input()
